@@ -1,4 +1,15 @@
+'''
+***********************************************
+*  Program: pickle_lesson2.py                 *
+* Author: Glenn Ivory                         *
+* Date: 1/27/2021                             *
+* The Hidden Genius Project                   *
+* Cohort: OAK8(THE BEST ONE!!!!!!!!!)         *
+***********************************************
+'''
+
 import pickle
+
 
 #1 Initialize an empty dictionary variable, name it all_pod_members
 all_pod_members = {}

@@ -1,3 +1,13 @@
+'''
+***********************************************
+*  Program: telephonebook.py                  *
+* Author: Glenn Ivory                         *
+* Date: 1/27/2021                             *
+* The Hidden Genius Project                   *
+* Cohort: OAK8(THE BEST ONE!!!!!!!!!)         *
+***********************************************
+'''
+
 import pickle
 
 # 1. Leader Numbers
