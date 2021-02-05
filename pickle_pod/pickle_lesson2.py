@@ -8,27 +8,32 @@
 ***********************************************
 '''
 
-import pickle
-
-
-#1 Initialize an empty dictionary variable, name it all_pod_members
-all_pod_members = {}
-
-#2 Initialize a file variable to write data to, name it pod_file, that will
-# open a file named hgp_pods that you will write data to the file. 
-pod_file = open('all_pods.pkl', 'wb')
-
-#3  Initialize empty dictionary variables, name it as such;
 jacore_members = {}
 andrew_members = {}
 richard_members = {}
 gabriel_members = {}
 aris_members = {}
 
+instructor = {}
+jacore_leader = {}
+andrew_leader = {}
+aris_leader = {}
+richard_leader = {}
+gabriel_leader = {}
 
-#4 Create an empty dictionary for the other 3 PODs; Aris, Gabriel and Richard
+instructor['Baba'] = jacore_leader
+instructor['Hodari'] = andrew_leader
+instructor['David'] = aris_leader
+instructor['Paris'] = richard_leader
+instructor['Akeem'] = gabriel_leader
 
-#5 Add the names and telephone numbers of each member POD  
+jacore_leader['Jacore'] = jacore_members
+andrew_leader['Andrew'] = andrew_members
+richard_leader['Richard'] = richard_members
+gabriel_leader['Gabriel'] = gabriel_members
+aris_leader['Aris'] =  aris_members
+
+
 jacore_members['Jacore Baptiste'] = '(845) 200-6250'
 jacore_members['Moussa Ndiaye'] = '(123) 456-7890'
 jacore_members['Morris Jones'] = '(925) 286-5922'
@@ -59,33 +64,14 @@ aris_members['Hyab Isayas'] = '(510)612-3737'
 
 
 
- 
-#6 Add all the PODS to the all_pod_members dictionary
-all_pod_members['Jacore'] = jacore_members
-all_pod_members['Andrew'] = andrew_members
-all_pod_members['Richard'] = richard_members
-all_pod_members['Gabriel'] = gabriel_members
-all_pod_members['Aris'] = aris_members
 
-#7 Dump all the 
-pickle.dump(jacore_members,pod_file)
-pickle.dump(andrew_members,pod_file)
-pickle.dump(richard_members,pod_file)
-pickle.dump(gabriel_members,pod_file)
-pickle.dump(aris_members,pod_file)
+#print(instructor)
 
+for instructor, pod_leader in instructor.items():
+  print('The Instructor:',instructor,':\n')
 
-
-#8 Open the pod_file to read data
-pod_file = open('all_pods.pkl', 'rb')
-print(all_pod_members,'\n')
-
-#9 Print all the Pod leaders and POD membership
-for leader,telephone in all_pod_members.items():
-  print('This POD Leader is',leader)
-  for leader2, telephone2 in telephone.items():
-    print(leader2,telephone2)
-  print('\n')
-
-pod_file.close()
-
+for pod_leader, pod_members in pod_leader.items():
+  print("pod_leader:", pod_leader)
+for pod_members, phone_number in pod_members.items():
+  print(pod_members,phone_number);
+print("\n")
