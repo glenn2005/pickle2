@@ -1,6 +1,6 @@
 '''
 ***********************************************
-*  Program: telephonebook.py                  *
+*  Program: POD_Tel_Book.py                   *
 * Author: Glenn Ivory                         *
 * Date: 1/27/2021                             *
 * The Hidden Genius Project                   *
